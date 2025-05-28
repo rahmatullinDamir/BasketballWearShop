@@ -1,4 +1,4 @@
-package org.example.basketballshop;
+package org.example.basketballshop.Core;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,4 +1,4 @@
-package org.example.basketballshop;
+package org.example.basketballshop.Core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
