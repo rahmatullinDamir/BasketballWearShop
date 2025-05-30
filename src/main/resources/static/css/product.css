@@ -1,0 +1,55 @@
+/* Метки "NEW" и "-20%" */
+.product-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Изображение товара */
+.product-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Цена */
+.price {
+    margin-top: 10px;
+    color: #666; /* Серый для старой цены */
+}
+.price span {
+    text-decoration: line-through;
+}
+
+/* Кнопка "В корзину" */
+.add-to-cart {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: none;
+    border-radius: 20%;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.add-to-cart:hover {
+    text-shadow: black;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.product {
+    position: relative;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    position: relative;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    line-height: 2;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}

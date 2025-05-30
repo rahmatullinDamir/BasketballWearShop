@@ -16,16 +16,32 @@
     <description>basketballShop</description>
     <url/>
     <licenses>
-        <license/>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT </url>
+            <distribution>repo</distribution>
+            <comments>The MIT License (MIT) is a permissive open source license with minimal restrictions.</comments>
+        </license>
     </licenses>
+
     <developers>
-        <developer/>
+        <developer>
+            <id>rahmatullinDamir</id>
+            <name>Дамир Рахматуллин</name>
+            <email>rahmatullin.damir21@gmail.com</email>
+            <url>https://github.com/rahmatullinDamir</url>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+3</timezone>
+        </developer>
     </developers>
+
     <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
+        <connection>scm:git:git://github.com/rahmatullinDamir/BasketballWearShop.git</connection>
+        <developerConnection>scm:git:ssh://github.com:rahmatullinDamir/BasketballWearShop.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/rahmatullinDamir/BasketballWearShop </url>
     </scm>
     <properties>
         <java.version>17</java.version>
@@ -48,18 +64,9 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-database-postgresql</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-core</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -93,6 +100,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -105,20 +117,9 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>1.18.30</version>
                         </path>
                     </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
                 </configuration>
             </plugin>
         </plugins>

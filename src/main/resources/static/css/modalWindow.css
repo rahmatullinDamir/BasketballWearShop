@@ -1,0 +1,86 @@
+/* Базовые стили модального окна */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Активный режим модального окна */
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Контент модального окна с анимацией */
+.modal-content {
+    background-color: #000;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+/* Активный контент */
+.modal.show .modal-content {
+    transform: scale(1);
+}
+.close-btn {
+    color: #fff;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: #FF0000; /* Красный при наведении */
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Поля ввода */
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #fff; /* Белая нижняя граница */
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+input[type="text"]::placeholder {
+    color: #666; /* Серый для placeholder */
+}
+
+/* Кнопка */
+button {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #FF0000; /* Красный при наведении */
+    color: #000;
+    border-color: #FF0000;
+}

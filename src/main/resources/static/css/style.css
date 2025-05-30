@@ -1,0 +1,33 @@
+@import "footer.css";
+@import "header.css";
+@import "product.css";
+@import "tournamentTable.css";
+@import "modalWindow.css";
+@import "profile.css";
+@import "admin.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #3c3c3c;
+    height: 100%;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 4%;
+}
