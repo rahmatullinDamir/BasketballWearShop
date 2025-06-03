@@ -11,5 +11,5 @@ public interface AddressService {
 
     Optional<AddressDto> getAddress(Long addressId);
     boolean deleteAddress(Long addressId);
-
+    boolean hasAddress(String email);
 }

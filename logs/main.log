@@ -1,0 +1,57 @@
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculating discount for user kimskiy222@mail.ru with 3 badges
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculated 10% discount for user kimskiy222@mail.ru based on badges
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.ProductServiceImpl - Retrieving all products with discount: 10%
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.ProductServiceImpl - Applying 10% discount to 1 products
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.ProductServiceImpl - Successfully retrieved and processed 1 products
+2025-06-01 00:02:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving orders for user: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieved 2 orders for user kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:19 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:20 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving order statistics for user: kimskiy222@mail.ru
+2025-06-01 00:02:20 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.OrderServiceImpl - Successfully retrieved order statistics for user: kimskiy222@mail.ru
+2025-06-01 00:02:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving orders for user: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieved 2 orders for user kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:28 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:32 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving order statistics for user: kimskiy222@mail.ru
+2025-06-01 00:02:32 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.OrderServiceImpl - Successfully retrieved order statistics for user: kimskiy222@mail.ru
+2025-06-01 00:02:32 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:32 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving orders for user: kimskiy222@mail.ru
+2025-06-01 00:02:36 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieved 2 orders for user kimskiy222@mail.ru
+2025-06-01 00:02:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 8
+2025-06-01 00:02:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 8: 0
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculating discount for user rahmatullin.damir21@gmail.com with 2 badges
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculated 5% discount for user rahmatullin.damir21@gmail.com based on badges
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Retrieving all products with discount: 5%
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Applying 5% discount to 1 products
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Successfully retrieved and processed 1 products
+2025-06-01 00:02:49 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:02:49 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving orders for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieved 5 orders for user rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:02:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0
+2025-06-01 00:02:59 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.ProductServiceImpl - Retrieving all products with discount: 0%
+2025-06-01 00:02:59 [http-nio-8080-exec-4] INFO  o.e.b.S.Impl.ProductServiceImpl - Successfully retrieved and processed 1 products
+2025-06-01 00:03:00 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:03:00 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0
+2025-06-01 00:03:06 [http-nio-8080-exec-3] INFO  o.e.b.S.Impl.ProductServiceImpl - Retrieving popular sizes by product
+2025-06-01 00:03:06 [http-nio-8080-exec-3] INFO  o.e.b.S.Impl.ProductServiceImpl - Successfully retrieved popular sizes for 5 products
+2025-06-01 00:03:06 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:03:06 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculating discount for user rahmatullin.damir21@gmail.com with 2 badges
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.BadgesServiceImpl - Calculated 5% discount for user rahmatullin.damir21@gmail.com based on badges
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Retrieving all products with discount: 5%
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Applying 5% discount to 1 products
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.S.Impl.ProductServiceImpl - Successfully retrieved and processed 1 products
+2025-06-01 00:03:10 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:03:10 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieving orders for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.OrderServiceImpl - Retrieved 5 orders for user rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.CartServiceImpl - Getting cart quantity for user 1
+2025-06-01 00:03:12 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.CartServiceImpl - Cart quantity for user 1: 0

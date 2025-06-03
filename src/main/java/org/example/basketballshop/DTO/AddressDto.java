@@ -15,10 +15,12 @@ public class AddressDto {
     private String city;
     private String postalCode;
     private String country;
+    private Long id;
 
 
     public static AddressDto in(Address address) {
         return AddressDto.builder()
+                .id(address.getId())
                 .street(address.getStreet())
                 .city(address.getCity())
                 .postalCode(address.getPostalCode())

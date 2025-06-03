@@ -1,0 +1,409 @@
+2025-05-31 23:20:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:20:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:20:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:20:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:20:16 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:20:19 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:20:19 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:20:19 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:20:19 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:20:20 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:23:07 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:23:07 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:23:07 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:23:07 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:23:07 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:48 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:48 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:48 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:24:48 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:24:48 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:24:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:24:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:24:55 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:02 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:07 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:07 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:07 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:07 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:07 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:15 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:15 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:15 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:15 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:15 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:26 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:26 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:26 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:26 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:27 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:31 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:31 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:31 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:31 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:32 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:41 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:43 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:44 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:44 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:44 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:44 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:44 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:55 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:55 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:55 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:25:55 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:25:55 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:56 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:25:59 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:04 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:04 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:04 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:04 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:04 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:06 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:09 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:16 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:24 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:24 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:24 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:24 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:24 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:26 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:31 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:31 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:26:31 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:26:31 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:26:31 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:23 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:26 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:26 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:28 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:30 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:30 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:30 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:30 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:30 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:31 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:31 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:31 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:31 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:31 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:32 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:33 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:33 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:33 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:33 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:33 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:38 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:39 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:40 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:40 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:40 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:40 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:40 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:36:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:36:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:36:42 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:38:27 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:38:27 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:38:27 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:38:27 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:38:28 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:39:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:39:42 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:42 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:46 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:39:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:39:47 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:54 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:54 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:39:54 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:39:54 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:39:54 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:31 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:31 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:41:31 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:41:31 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:31 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:41:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:41:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:41:37 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:47 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:48 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:42:48 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:42:48 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:48 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:50 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:50 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:50 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:42:50 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:42:50 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:53 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:53 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:42:53 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:42:53 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:53 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:55 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:55 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:55 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:42:55 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:42:55 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:57 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:57 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:42:57 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:42:57 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:42:57 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:03 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:05 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:06 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:06 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:06 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:06 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:06 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:18 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:18 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:18 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:18 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:18 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:52 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:52 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:52 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:52 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:52 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:54 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:54 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:54 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:54 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:54 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:56 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:57 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:57 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:57 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:57 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:57 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:58 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:58 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:58 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:58 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:58 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:59 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:43:59 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:43:59 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:43:59 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:44:00 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:44:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:44:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:44:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:44:06 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:44:06 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:04 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:04 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:48:04 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:48:04 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:04 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:13 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:14 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:48:14 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:48:14 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:14 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:25 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:25 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:48:25 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:48:25 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:48:25 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:50:43 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:50:43 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:50:43 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:50:43 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:50:43 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:18 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:18 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:51:18 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:51:18 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:18 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:22 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:22 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:51:22 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:51:22 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:51:22 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:19 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:19 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:19 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:19 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:19 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:21 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:23 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:24 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:24 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:24 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:29 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:29 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:29 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:29 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:29 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:32 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:32 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:32 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:32 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:32 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:35 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:35 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:35 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:35 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:35 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:40 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:40 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:40 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:40 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:41 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:45 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:45 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:45 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:45 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:45 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:56 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:56 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:53:56 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:53:56 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:53:56 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:09 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:09 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:56:09 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:56:09 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:09 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:56:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:56:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:16 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:21 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:21 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:56:21 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:56:21 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:21 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:22 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:22 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:22 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:56:22 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:56:22 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:56:26 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:26 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:26 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:57:26 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:57:26 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:27 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:28 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:29 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:29 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:57:29 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:57:29 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:33 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:33 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:57:33 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:57:33 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:33 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:41 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:41 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:57:41 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:57:41 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:41 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:47 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:47 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:57:47 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:57:47 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:57:47 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:47 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:47 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:58:47 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:58:47 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:47 [http-nio-8080-exec-3] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:49 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:49 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:49 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:58:49 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: kimskiy222@mail.ru
+2025-05-31 23:58:49 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:54 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:54 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:54 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:58:54 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:58:55 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:57 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:57 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:58:57 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:58:57 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:58:57 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:00 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:00 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:00 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:59:00 [http-nio-8080-exec-7] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:59:00 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:02 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:02 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:59:02 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:59:02 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:02 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:30 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:30 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:59:30 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:59:30 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:30 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:35 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:35 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-05-31 23:59:35 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-05-31 23:59:35 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-05-31 23:59:35 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru

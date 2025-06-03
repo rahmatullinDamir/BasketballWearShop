@@ -97,4 +97,3 @@ public class NbaTableResponse {
     private long divisionRank;
 }
 
-// Conference.java

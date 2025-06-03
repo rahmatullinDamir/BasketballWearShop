@@ -1,4 +1,4 @@
-/* Базовые стили модального окна */
+/* Modal Base Styles */
 .modal {
     position: fixed;
     z-index: 1000;
@@ -13,74 +13,514 @@
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-/* Активный режим модального окна */
 .modal.show {
     opacity: 1;
     visibility: visible;
 }
 
-/* Контент модального окна с анимацией */
+/* Modal Content */
 .modal-content {
-    background-color: #000;
+    background-color: var(--background-color);
     margin: 10% auto;
-    padding: 30px;
-    border: 1px solid #fff;
-    border-radius: 8px;
+    padding: var(--spacing-xl);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     width: 80%;
     max-width: 500px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
     transform: scale(0.95);
     transition: transform 0.3s ease;
 }
 
-/* Активный контент */
 .modal.show .modal-content {
     transform: scale(1);
 }
-.close-btn {
-    color: #fff;
+
+/* Close Button */
+.close-btn,
+.close {
+    color: var(--text-color);
     float: right;
-    font-size: 24px;
+    font-size: var(--font-size-xl);
     font-weight: bold;
     cursor: pointer;
-}
-.close-btn:hover {
-    color: #FF0000; /* Красный при наведении */
+    transition: color var(--transition-speed);
 }
 
-/* Форма */
-form {
+.close-btn:hover,
+.close:hover {
+    color: var(--secondary-color);
+}
+
+/* Modal Forms */
+.modal form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--spacing-md);
 }
 
-/* Поля ввода */
-input[type="text"] {
-    padding: 10px;
+.modal .form-control {
+    padding: var(--spacing-sm);
     border: none;
-    border-bottom: 1px solid #fff; /* Белая нижняя граница */
+    border-bottom: 1px solid var(--border-color);
     background-color: transparent;
-    color: #fff;
-    font-size: 16px;
-}
-input[type="text"]::placeholder {
-    color: #666; /* Серый для placeholder */
+    color: var(--text-color);
+    font-size: var(--font-size-md);
+    transition: border-color var(--transition-speed);
 }
 
-/* Кнопка */
-button {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.modal .form-control::placeholder {
+    color: var(--border-color);
 }
-button:hover {
-    background-color: #FF0000; /* Красный при наведении */
-    color: #000;
-    border-color: #FF0000;
+
+.modal .form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Modal Buttons */
+.modal button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border-radius: var(--border-radius);
+}
+
+.modal button:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border-color: var(--secondary-color);
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+}
+
+.image-slider img {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.image-slider img.active {
+    display: block;
+}
+
+.image-slider .prev,
+.image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--background-color);
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    z-index: 2;
+}
+
+.image-slider .prev {
+    left: var(--spacing-sm);
+}
+
+.image-slider .next {
+    right: var(--spacing-sm);
+}
+
+.image-slider .prev:hover,
+.image-slider .next:hover {
+    background-color: var(--primary-color);
+}
+
+/* Product Modal Specific */
+.modal-content-product {
+    background-color: var(--background-color);
+    margin: 15% auto;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: var(--spacing-sm);
+    border-radius: var(--border-radius);
+}
+
+.modal-size-selector {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-xs);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+}
+
+.add-to-cart-modal {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.add-to-cart-modal:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Address Modal Specific */
+.address-modal .modal-content {
+    max-width: 400px;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.address-form .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.address-form .form-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.address-form .form-control {
+    width: 100%;
+}
+
+.address-form .btn-submit {
+    margin-top: var(--spacing-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content,
+    .modal-content-product {
+        width: 95%;
+        margin: 5% auto;
+        padding: var(--spacing-md);
+    }
+
+    .image-slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content,
+    .modal-content-product {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+}
+
+/* Modal Product */
+.modalProduct {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content-product {
+    position: relative;
+    background-color: var(--background-color);
+    margin: 5% auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    animation: modalFade var(--transition-speed) ease-in-out;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+}
+
+.close {
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.close:hover {
+    color: var(--secondary-color);
+}
+
+.modal-body {
+    padding: var(--spacing-xl);
+}
+
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.image-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+.image-slider img.active {
+    opacity: 1;
+}
+
+.image-slider .prev,
+.image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--font-size-xl);
+    border-radius: 50%;
+    transition: all var(--transition-speed);
+    z-index: 2;
+}
+
+.image-slider .prev {
+    left: var(--spacing-sm);
+}
+
+.image-slider .next {
+    right: var(--spacing-sm);
+}
+
+.image-slider .prev:hover,
+.image-slider .next:hover {
+    background-color: var(--secondary-color);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.modal-description {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.modal-price {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.size-selection,
+.quantity-selection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.size-selection label,
+.quantity-selection label {
+    font-size: var(--font-size-sm);
+    color: var(--text-color);
+}
+
+.modal-size-selector {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color var(--transition-speed);
+}
+
+.modal-size-selector:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed);
+}
+
+.quantity-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+#quantity {
+    width: 60px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-md);
+}
+
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-to-cart-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    margin-top: var(--spacing-md);
+}
+
+.add-to-cart-modal:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    font-size: var(--font-size-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content-product {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .product-details {
+        grid-template-columns: 1fr;
+    }
+
+    .image-slider {
+        height: 300px;
+    }
+
+    .modal-header {
+        padding: var(--spacing-md);
+    }
+
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+
+    .modal-title {
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content-product {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .image-slider {
+        height: 250px;
+    }
+
+    .quantity-controls {
+        justify-content: center;
+    }
 }

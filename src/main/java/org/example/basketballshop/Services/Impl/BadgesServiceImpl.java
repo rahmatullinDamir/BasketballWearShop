@@ -8,14 +8,17 @@ import org.example.basketballshop.Repositories.BadgesRepository;
 import org.example.basketballshop.Repositories.UserRepository;
 import org.example.basketballshop.Services.BadgesService;
 import org.example.basketballshop.Services.ImageInfoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
 @Service
 public class BadgesServiceImpl implements BadgesService {
+    private static final Logger logger = LoggerFactory.getLogger(BadgesServiceImpl.class);
 
     @Autowired
     private BadgesRepository badgeRepository;
@@ -29,50 +32,96 @@ public class BadgesServiceImpl implements BadgesService {
     @Autowired
     private UserRepository userRepository;
 
-
-    // Проверить, есть ли у пользователя определённый значок
     public boolean hasBadge(User user, String badgeName) {
-        return user.getBadges().stream()
-                .anyMatch(badge -> badge.getName().equalsIgnoreCase(badgeName));
-    }
-
-    // Начислить значок пользователю, если он ещё не имеет его
-    public void awardBadgeToUser(User user, String badgeName) {
-        Badge badge = badgeRepository.findByNameIgnoreCase(badgeName)
-                .orElseThrow(() -> new RuntimeException("Значок не найден"));
-
-        if (!hasBadge(user, badgeName)) {
-            user.getBadges().add(badge);
-            badge.getUsers().add(user);
-            userRepository.save(user);
+        try {
+            logger.info("Checking if user {} has badge: {}", user.getEmail(), badgeName);
+            boolean hasBadge = user.getBadges().stream()
+                    .anyMatch(badge -> badge.getName().equalsIgnoreCase(badgeName));
+            logger.info("User {} {} badge {}", user.getEmail(), hasBadge ? "has" : "does not have", badgeName);
+            return hasBadge;
+        } catch (Exception e) {
+            logger.error("Error checking badge {} for user {}", badgeName, user.getEmail(), e);
+            throw e;
         }
     }
 
-    // Пример: Разблокировка скидки по количеству значков
+    public void awardBadgeToUser(User user, String badgeName) {
+        try {
+            logger.info("Attempting to award badge {} to user {}", badgeName, user.getEmail());
+            
+            Badge badge = badgeRepository.findByNameIgnoreCase(badgeName)
+                    .orElseThrow(() -> {
+                        logger.error("Badge not found: {}", badgeName);
+                        return new RuntimeException("Значок не найден");
+                    });
+
+            if (!hasBadge(user, badgeName)) {
+                logger.info("Adding badge {} to user {}", badgeName, user.getEmail());
+                user.getBadges().add(badge);
+                badge.getUsers().add(user);
+                userRepository.save(user);
+                logger.info("Successfully awarded badge {} to user {}", badgeName, user.getEmail());
+            } else {
+                logger.info("User {} already has badge {}", user.getEmail(), badgeName);
+            }
+        } catch (DataAccessException e) {
+            logger.error("Database error while awarding badge {} to user {}", badgeName, user.getEmail(), e);
+            throw new RuntimeException("Error awarding badge: " + e.getMessage());
+        } catch (Exception e) {
+            logger.error("Error awarding badge {} to user {}", badgeName, user.getEmail(), e);
+            throw e;
+        }
+    }
+
     public int calculateDiscountByBadges() {
-        User user = userService.getUserFromSession();
-        int badgeCount = user.getBadges().size();
+        try {
+            User user = userService.getUserFromSession();
+            int badgeCount = user.getBadges().size();
+            logger.info("Calculating discount for user {} with {} badges", user.getEmail(), badgeCount);
 
-        if (badgeCount >= 5) return 15; // 15% скидка за 5 значков
-        if (badgeCount >= 3) return 10; // 10% скидка за 3 значка
-        if (badgeCount >= 1) return 5;  // 5% скидка за 1 значок
+            int discount;
+            if (badgeCount >= 5) {
+                discount = 15;
+            } else if (badgeCount >= 3) {
+                discount = 10;
+            } else if (badgeCount >= 1) {
+                discount = 5;
+            } else {
+                discount = 0;
+            }
 
-        return 0; // нет скидки
+            logger.info("Calculated {}% discount for user {} based on badges", discount, user.getEmail());
+            return discount;
+        } catch (Exception e) {
+            logger.error("Error calculating discount by badges", e);
+            throw e;
+        }
     }
 
     @Override
     public boolean createBadgeWithIcon(BadgeForm badgeForm) {
-        ImageInfo iconImage = imageInfoService.saveImage(badgeForm.getIcon()); // твой уже существующий метод
+        try {
+            logger.info("Creating new badge: {}", badgeForm.getName());
+            
+            logger.info("Saving badge icon");
+            ImageInfo iconImage = imageInfoService.saveImage(badgeForm.getIcon());
 
-        Badge badge = Badge.builder()
-                .name(badgeForm.getName())
-                .description(badgeForm.getDescription())
-                .requiredPoints(badgeForm.getRequiredPoints())
-                .iconImageInfo(iconImage)
-                .build();
+            Badge badge = Badge.builder()
+                    .name(badgeForm.getName())
+                    .description(badgeForm.getDescription())
+                    .requiredPoints(badgeForm.getRequiredPoints())
+                    .iconImageInfo(iconImage)
+                    .build();
 
-        badgeRepository.save(badge);
-
-        return true;
+            badgeRepository.save(badge);
+            logger.info("Successfully created badge: {}", badgeForm.getName());
+            return true;
+        } catch (DataAccessException e) {
+            logger.error("Database error while creating badge: {}", badgeForm.getName(), e);
+            throw new RuntimeException("Error creating badge: " + e.getMessage());
+        } catch (Exception e) {
+            logger.error("Error creating badge: {}", badgeForm.getName(), e);
+            throw e;
+        }
     }
 }

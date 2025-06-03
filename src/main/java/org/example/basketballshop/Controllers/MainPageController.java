@@ -42,6 +42,7 @@ public class MainPageController {
         List<ProductDto> products = productService.getAllProductsWithDiscount(discount);
         System.out.println("PRODUCTS " + products);
         model.addAttribute("products", products);
+        model.addAttribute("isAuth", isAuthenticated);
         return "main_page";
     }
 }

@@ -1,5 +1,6 @@
 package org.example.basketballshop.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +30,7 @@ public class ImageInfo {
 
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "product_id")
     private Product product;
 }

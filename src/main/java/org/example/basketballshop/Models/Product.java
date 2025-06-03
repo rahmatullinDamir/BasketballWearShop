@@ -1,5 +1,6 @@
 package org.example.basketballshop.Models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -21,13 +22,24 @@ public class Product {
     private String name;
     private String description;
     private BigDecimal price;
-    private String sizes;
 
-    @ManyToMany(mappedBy = "products")
-    private List<Order> orders = new ArrayList<>();
+    @JsonManagedReference
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProductSize> sizes = new ArrayList<>();
 
+    @OneToMany(mappedBy = "product")
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    @JsonManagedReference
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ImageInfo> images = new ArrayList<>();
 
-    // Getters and setters
+
+    public List<ProductSize> getSizes() {
+        if (sizes == null) {
+            sizes = new ArrayList<>();
+        }
+        return sizes;
+    }
+
 }

@@ -1,0 +1,44 @@
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-06-01 00:02:16 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:16 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-06-01 00:02:19 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:20 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-06-01 00:02:28 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:32 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: kimskiy222@mail.ru
+2025-06-01 00:02:35 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - No address found for user: kimskiy222@mail.ru
+2025-06-01 00:02:36 [http-nio-8080-exec-4] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: kimskiy222@mail.ru
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:49 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:49 [http-nio-8080-exec-5] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:02:55 [http-nio-8080-exec-2] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:00 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:06 [http-nio-8080-exec-8] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:09 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:10 [http-nio-8080-exec-10] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:10 [http-nio-8080-exec-9] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Checking address for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-6] INFO  o.e.b.Services.Impl.UserServiceImpl - Address found for user: rahmatullin.damir21@gmail.com
+2025-06-01 00:03:12 [http-nio-8080-exec-1] INFO  o.e.b.Services.Impl.UserServiceImpl - Attempting to get user from session with email: rahmatullin.damir21@gmail.com

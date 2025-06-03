@@ -22,3 +22,212 @@ th {
     color: red;
     font-weight: bold;
 }
+
+.tournament-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tournament-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tournament-header h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tournament-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--background-color);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.stat-icon {
+    font-size: 24px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.tournament-content {
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    overflow: hidden;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 0 -1px;
+}
+
+.table-wrapper {
+    padding: 20px;
+}
+
+.tournament-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+.tournament-table th,
+.tournament-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tournament-table th {
+    background: var(--primary-color);
+    color: var(--background-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tournament-table th:first-child {
+    border-top-left-radius: var(--border-radius);
+}
+
+.tournament-table th:last-child {
+    border-top-right-radius: var(--border-radius);
+}
+
+.tournament-table tr:last-child td {
+    border-bottom: none;
+}
+
+.tournament-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.team-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.numeric {
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.streak {
+    text-align: center;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.streak.win {
+    background: #e8f5e9;
+    color: var(--success-color);
+}
+
+.streak.loss {
+    background: #ffebee;
+    color: var(--error-color);
+}
+
+.table-legend {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.legend-color.win {
+    background: #e8f5e9;
+    border: 1px solid var(--success-color);
+}
+
+.legend-color.loss {
+    background: #ffebee;
+    border: 1px solid var(--error-color);
+}
+
+.legend-text {
+    color: #666;
+    font-size: 14px;
+}
+
+.legend-text.small {
+    font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+    .tournament-table {
+        font-size: 13px;
+    }
+
+    .tournament-table th,
+    .tournament-table td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tournament-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tournament-table {
+        font-size: 12px;
+    }
+
+    .tournament-table th,
+    .tournament-table td {
+        padding: 10px 6px;
+    }
+
+    .legend-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}

@@ -24,6 +24,6 @@ public class BadgeController {
            redirectAttributes.addFlashAttribute("message", "Значок не добавлен...");
        }
 
-        return "redirect:/admin"; // перенаправление обратно на страницу админа
+        return "redirect:/admin";
     }
 }

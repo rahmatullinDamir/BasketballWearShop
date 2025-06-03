@@ -1,11 +1,15 @@
 package org.example.basketballshop.Models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +22,18 @@ public class Cart {
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CartItem> items = new ArrayList<>();
 
-//    public void addItem(CartItem item) {
-//        items.add(item);
-//        item.setCart(this);
-//    }
-//
-//    public void removeItem(CartItem item) {
-//        items.remove(item);
-//        item.setCart(null);
-//    }
+    @ManyToOne
+    @JoinColumn(name = "applied_certificate_id")
+    private GiftCertificate appliedCertificate;
 
-    // Getters and setters
+    public void addItem(CartItem item) {
+        items.add(item);
+        item.setCart(this);
+    }
+
+    public void removeItem(CartItem item) {
+        items.remove(item);
+        item.setCart(null);
+    }
+
 }

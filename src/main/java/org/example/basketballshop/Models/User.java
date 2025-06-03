@@ -19,6 +19,7 @@ public class User {
     private Long id;
 
     private String username;
+    @Column(unique = true)
     private String email;
     private String password;
 
@@ -39,11 +40,11 @@ public class User {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Cart cart;
 
-    @OneToMany(mappedBy = "recipient")
-    private List<GiftCertificate> receivedCertificates = new ArrayList<>();
+    @OneToMany(mappedBy = "buyer")
+    private List<GiftCertificate> purchasedCertificates = new ArrayList<>();
 
-    @OneToMany(mappedBy = "sender")
-    private List<GiftCertificate> sentCertificates = new ArrayList<>();
+    @OneToMany(mappedBy = "usedBy")
+    private List<GiftCertificate> usedCertificates = new ArrayList<>();
 
     public User() {
         this.badges = new ArrayList<>();
@@ -88,11 +89,11 @@ public class User {
         return cart;
     }
 
-    public List<GiftCertificate> getReceivedCertificates() {
-        return receivedCertificates;
+    public List<GiftCertificate> getPurchasedCertificates() {
+        return purchasedCertificates;
     }
 
-    public List<GiftCertificate> getSentCertificates() {
-        return sentCertificates;
+    public List<GiftCertificate> getUsedCertificates() {
+        return usedCertificates;
     }
 }

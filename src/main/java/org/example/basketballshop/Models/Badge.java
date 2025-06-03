@@ -17,9 +17,9 @@ public class Badge {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;        // Например: "Первый заказ"
-    private String description; // Описание: "Совершите первый заказ"
-    private int requiredPoints; // Можно использовать для условий получения
+    private String name;
+    private String description;
+    private int requiredPoints;
 
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -35,7 +35,6 @@ public class Badge {
     private List<User> users = new ArrayList<>();
 
 
-    // Getters and setters
 
     @Override
     public String toString() {

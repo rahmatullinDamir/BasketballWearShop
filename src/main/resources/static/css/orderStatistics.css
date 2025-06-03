@@ -1,0 +1,192 @@
+.statistics-container {
+    max-width: var(--container-width);
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.statistics-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.statistics-header h1 {
+    font-size: var(--font-size-xxl);
+    color: var(--primary-color);
+}
+
+/* Статистика */
+.statistics-section {
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.statistics-section h2 {
+    font-size: var(--font-size-xl);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.stat-card {
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform var(--transition-speed);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Форма поиска */
+.search-section {
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-size: var(--font-size-sm);
+    color: var(--text-color);
+}
+
+.form-group input {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+}
+
+.search-button {
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.search-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Результаты поиска */
+.search-results {
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.orders-list {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.order-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-number {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.order-date {
+    color: var(--text-color);
+    font-size: var(--font-size-sm);
+}
+
+.order-items {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-details {
+    display: flex;
+    gap: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.order-footer {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+.order-total {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+}
+
+.no-results {
+    text-align: center;
+    color: var(--text-color);
+    padding: var(--spacing-xl);
+    font-size: var(--font-size-lg);
+} 
