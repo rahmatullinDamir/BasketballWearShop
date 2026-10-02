@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -77,6 +78,16 @@ public class OrderServiceImpl implements OrderService {
                     .map(item -> item.getProduct().getPrice().multiply(BigDecimal.valueOf(item.getQuantity())))
                     .reduce(BigDecimal.ZERO, BigDecimal::add);
 
+            int discountPercentage = badgesService.calculateDiscountByBadges();
+            BigDecimal discountAmount = subtotal.multiply(
+                    BigDecimal.valueOf(discountPercentage)
+                            .divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP)
+            );
+            BigDecimal afterDiscount = subtotal.subtract(discountAmount);
+            order.setDiscount(discountPercentage);
+            logger.info("Applied {}% badge discount to order: subtotal {}, discount {}",
+                    discountPercentage, subtotal, discountAmount);
+
             if (cart.getAppliedCertificate() != null) {
                 logger.info("Processing gift certificate for order");
                 GiftCertificate certificate = cart.getAppliedCertificate();
@@ -88,7 +99,7 @@ public class OrderServiceImpl implements OrderService {
                 }
 
                 logger.info("Calculating total with certificate");
-                BigDecimal total = cartService.calculateTotalWithCertificate(cart, subtotal);
+                BigDecimal total = cartService.calculateTotalWithCertificate(cart, afterDiscount);
                 order.setTotal(total);
 
                 logger.info("Marking certificate as used");
@@ -99,7 +110,7 @@ public class OrderServiceImpl implements OrderService {
                 
                 cart.setAppliedCertificate(null);
             } else {
-                order.setTotal(subtotal);
+                order.setTotal(afterDiscount);
             }
 
             logger.info("Converting cart items to order items");
@@ -116,7 +127,12 @@ public class OrderServiceImpl implements OrderService {
                             .orElse("Unknown Size");
                     
                     orderItem.setSize(sizeName);
-                    orderItem.setPrice(cartItem.getProduct().getPrice());
+
+                    BigDecimal itemDiscount = cartItem.getProduct().getPrice()
+                            .multiply(BigDecimal.valueOf(discountPercentage)
+                                    .divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP));
+                    orderItem.setPrice(cartItem.getProduct().getPrice()
+                            .subtract(itemDiscount).setScale(2, RoundingMode.HALF_UP));
                     order.addItem(orderItem);
                 } catch (Exception e) {
                     logger.error("Error processing cart item for order", e);
