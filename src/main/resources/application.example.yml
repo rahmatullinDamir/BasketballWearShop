@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/PASTE_YOUR_DB_NAME
-    username: PASTE_YOUR_USERNAME
-    password: PASTE_YOUR_PASSWORD
-  jpa:
-    hibernate:
-      ddl-auto: update

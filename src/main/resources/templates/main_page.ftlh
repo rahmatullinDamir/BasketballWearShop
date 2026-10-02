@@ -26,7 +26,7 @@
                         <#if product.discount != 0>
                             <div class="product-tag">NEW<br>${product.discount}%</div>
                         </#if>
-                        <img src="http://localhost:8080/files/${product.images[0].storageName}" alt="img"
+                        <img src="${product.images[0].imageUrl}" alt="img"
                              class="product-image">
                         <h3>${product.name}</h3>
                         <#if product.discount != 0>
@@ -82,7 +82,7 @@
                         if (product.images && product.images.length > 0) {
                             product.images.forEach((image, index) => {
                                 const img = document.createElement('img');
-                                img.src = "http://localhost:8080/files/" + image.storageName;
+                                img.src = image.imageUrl;
                                 img.alt = product.name;
 
                                 if (index === 0) {
