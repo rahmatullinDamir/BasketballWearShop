@@ -90,7 +90,21 @@
                         <#list user.badges as badge>
                             <div class="badge-card">
                                 <div class="badge-icon">
-                                    <img src="http://localhost:8080/files/${badge.iconImageInfo.storageName}" alt="${badge.name}"/>
+                                       <#if badge.iconImageInfo?? && badge.iconImageInfo.imageUrl??>
+                                           <img src="${badge.iconImageInfo.imageUrl}" alt="${badge.name}">
+                                       <#else>
+                                           <#assign badgeFileName = "default-badge">
+
+                                           <#if badge.name == 'Новичок'>
+                                               <#assign badgeFileName = "novice">
+                                           <#elseif badge.name == 'Боллер'>
+                                               <#assign badgeFileName = "boller">
+                                           <#elseif badge.name == 'Знаток доставки'>
+                                               <#assign badgeFileName = "delivery">
+                                           </#if>
+
+                                           <img src="/images/badges/${badgeFileName}.png" alt="${badge.name}">
+                                       </#if>
                                 </div>
                                 <div class="badge-info">
                                     <h4>${badge.name}</h4>

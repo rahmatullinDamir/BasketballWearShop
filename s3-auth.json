@@ -1,0 +1,18 @@
+{
+  "identities": [
+    {
+      "name": "basketball_shop_backend",
+      "credentials": [
+        {
+          "accessKey": "shop_admin_key",
+          "secretKey": "super_secret_shop_password"
+        }
+      ],
+      "actions": ["Read", "Write", "List", "Tagging", "Admin"]
+    },
+    {
+      "name": "anonymous",
+      "actions": ["Read"]
+    }
+  ]
+}

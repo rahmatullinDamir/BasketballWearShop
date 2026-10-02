@@ -1,0 +1,30 @@
+name: 12-Factor Pipeline
+
+on:
+  push:
+    branches: [ "main", "master", "feature/**" ]
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: ./mvnw clean package -DskipTests
+
+      - name: Build Docker Image
+        run: |
+          docker build -t basketball-shop:${{ github.sha }} .
+
+      - name: Run Info
+        run: echo "Build and Release stage completed successfully for commit ${{ github.sha }}"

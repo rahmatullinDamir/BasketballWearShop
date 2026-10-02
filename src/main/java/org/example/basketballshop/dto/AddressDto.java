@@ -1,0 +1,33 @@
+package org.example.basketballshop.dto;
+
+import lombok.Builder;
+import lombok.Data;
+import org.example.basketballshop.models.Address;
+
+import java.util.List;
+
+@Builder
+@Data
+public class AddressDto {
+
+    private String street;
+    private String city;
+    private String postalCode;
+    private String country;
+    private Long id;
+
+
+    public static AddressDto in(Address address) {
+        return AddressDto.builder()
+                .id(address.getId())
+                .street(address.getStreet())
+                .city(address.getCity())
+                .postalCode(address.getPostalCode())
+                .country(address.getCountry())
+                .build();
+    }
+
+    public static List<AddressDto> from(List<Address> addresses) {
+        return addresses.stream().map(AddressDto::in).toList();
+    }
+}
