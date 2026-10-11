@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s3
+  template:
+    metadata:
+      labels:
+        app: s3
+    spec:
+      containers:
+        - name: s3
+          image: chrislusf/seaweedfs:latest
+          args: [ "server", "-dir=/data", "-s3", "-s3.config=/etc/seaweedfs/s3-auth.json" ]
+          ports:
+            - containerPort: 8333
+            - containerPort: 9333
+          volumeMounts:
+            - name: s3-storage
+              mountPath: /data
+            - name: s3-config-volume
+              mountPath: /etc/seaweedfs/s3-auth.json
+              subPath: s3-auth.json
+      volumes:
+        - name: s3-storage
+          persistentVolumeClaim:
+            claimName: s3-pvc
+        - name: s3-config-volume
+          secret:
+            secretName: s3-auth-secret
