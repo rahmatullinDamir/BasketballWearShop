@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <springProperty scope="context" name="appName" source="spring.application.name" defaultValue="basketball_wear_shop"/>
+    <property name="INSTANCE" value="${HOSTNAME:-local-instance}"/>
+    <property name="DC" value="${DC:-s19}"/>
+    <property name="ENV" value="${ENV:-prod}"/>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
-            <charset>utf8</charset>
+    <appender name="JSON_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <fieldName>time</fieldName>
+                    <pattern>yyyy-MM-dd'T'HH:mm:ssXXX</pattern>
+                </timestamp>
+
+                <message>
+                    <fieldName>msg</fieldName>
+                </message>
+
+                <logLevel>
+                    <fieldName>level</fieldName>
+                    <valueMasker class="net.logstash.logback.value.masker.ValueMasker"/>
+                </logLevel>
+
+                <pattern>
+                    <omitEmptyFields>false</omitEmptyFields>
+                    <pattern>
+                        {
+                        "app_name": "${appName}",
+                        "instance": "${INSTANCE}",
+                        "request_id": "%mdc{request_id:-system}",
+                        "dc": "${DC}",
+                        "env": "${ENV}",
+                        "thread": "%thread"
+                        }
+                    </pattern>
+                </pattern>
+
+                <stackTrace>
+                    <fieldName>stack_trace</fieldName>
+                </stackTrace>
+            </providers>
         </encoder>
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="JSON_STDOUT"/>
     </root>
 </configuration>
