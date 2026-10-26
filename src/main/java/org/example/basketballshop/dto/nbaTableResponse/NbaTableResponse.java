@@ -1,97 +1,94 @@
 package org.example.basketballshop.dto.nbaTableResponse;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
-
-@lombok.Data
+@Data
 public class NbaTableResponse {
-    @lombok.Getter(onMethod_ = {@JsonProperty("Season")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Season")})
+    @JsonProperty("Season")
     private long season;
-    @lombok.Getter(onMethod_ = {@JsonProperty("SeasonType")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("SeasonType")})
+
+    @JsonProperty("SeasonType")
     private long seasonType;
-    @lombok.Getter(onMethod_ = {@JsonProperty("TeamID")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("TeamID")})
+
+    @JsonProperty("TeamID")
     private long teamId;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Key")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Key")})
+
+    @JsonProperty("Key")
     private String key;
-    @lombok.Getter(onMethod_ = {@JsonProperty("City")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("City")})
+
+    @JsonProperty("City")
     private String city;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Name")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Name")})
+
+    @JsonProperty("Name")
     private String name;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Conference")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Conference")})
+
+    @JsonProperty("Conference")
     private Conference conference;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Division")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Division")})
+
+    @JsonProperty("Division")
     private String division;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Wins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Wins")})
+
+    @JsonProperty("Wins")
     private long wins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Losses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Losses")})
+
+    @JsonProperty("Losses")
     private long losses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Percentage")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Percentage")})
+
+    @JsonProperty("Percentage")
     private double percentage;
-    @lombok.Getter(onMethod_ = {@JsonProperty("ConferenceWins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("ConferenceWins")})
+
+    @JsonProperty("ConferenceWins")
     private long conferenceWins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("ConferenceLosses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("ConferenceLosses")})
+
+    @JsonProperty("ConferenceLosses")
     private long conferenceLosses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("DivisionWins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("DivisionWins")})
+
+    @JsonProperty("DivisionWins")
     private long divisionWins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("DivisionLosses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("DivisionLosses")})
+
+    @JsonProperty("DivisionLosses")
     private long divisionLosses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("HomeWins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("HomeWins")})
+
+    @JsonProperty("HomeWins")
     private long homeWins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("HomeLosses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("HomeLosses")})
+
+    @JsonProperty("HomeLosses")
     private long homeLosses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("AwayWins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("AwayWins")})
+
+    @JsonProperty("AwayWins")
     private long awayWins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("AwayLosses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("AwayLosses")})
+
+    @JsonProperty("AwayLosses")
     private long awayLosses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("LastTenWins")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("LastTenWins")})
+
+    @JsonProperty("LastTenWins")
     private long lastTenWins;
-    @lombok.Getter(onMethod_ = {@JsonProperty("LastTenLosses")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("LastTenLosses")})
+
+    @JsonProperty("LastTenLosses")
     private long lastTenLosses;
-    @lombok.Getter(onMethod_ = {@JsonProperty("PointsPerGameFor")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("PointsPerGameFor")})
+
+    @JsonProperty("PointsPerGameFor")
     private double pointsPerGameFor;
-    @lombok.Getter(onMethod_ = {@JsonProperty("PointsPerGameAgainst")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("PointsPerGameAgainst")})
+
+    @JsonProperty("PointsPerGameAgainst")
     private double pointsPerGameAgainst;
-    @lombok.Getter(onMethod_ = {@JsonProperty("Streak")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("Streak")})
+
+    @JsonProperty("Streak")
     private long streak;
-    @lombok.Getter(onMethod_ = {@JsonProperty("GamesBack")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("GamesBack")})
+
+    @JsonProperty("GamesBack")
     private long gamesBack;
-    @lombok.Getter(onMethod_ = {@JsonProperty("StreakDescription")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("StreakDescription")})
+
+    @JsonProperty("StreakDescription")
     private String streakDescription;
-    @lombok.Getter(onMethod_ = {@JsonProperty("GlobalTeamID")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("GlobalTeamID")})
+
+    @JsonProperty("GlobalTeamID")
     private long globalTeamId;
-    @lombok.Getter(onMethod_ = {@JsonProperty("ConferenceRank")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("ConferenceRank")})
+
+    @JsonProperty("ConferenceRank")
     private long conferenceRank;
-    @lombok.Getter(onMethod_ = {@JsonProperty("DivisionRank")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("DivisionRank")})
+
+    @JsonProperty("DivisionRank")
     private long divisionRank;
 }
-

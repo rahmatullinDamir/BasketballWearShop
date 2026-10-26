@@ -1,5 +1,7 @@
 package org.example.basketballshop.services.Impl;
 
+import io.micrometer.core.instrument.MeterRegistry;
+import lombok.RequiredArgsConstructor;
 import org.example.basketballshop.dto.GiftCertificateDto;
 import org.example.basketballshop.dto.forms.GiftCertificateForm;
 import org.example.basketballshop.models.enums.GiftCertificateStatus;
@@ -19,13 +21,12 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class GiftCertificateServiceImpl implements GiftCertificateService {
 
-    @Autowired
-    private GiftCertificateRepository giftCertificateRepository;
-
-    @Autowired
-    private UserRepository userRepository;
+    private final MeterRegistry meterRegistry;
+    private final UserRepository userRepository;
+    private final GiftCertificateRepository giftCertificateRepository;
 
     @Override
     public GiftCertificateDto purchaseCertificate(GiftCertificateForm form, String buyerEmail) {
@@ -38,6 +39,7 @@ public class GiftCertificateServiceImpl implements GiftCertificateService {
                 .buyer(buyer)
                 .build();
 
+        meterRegistry.counter("shop_gift_certificates_total", "action", "issued").increment();
         return GiftCertificateDto.from(giftCertificateRepository.save(certificate));
     }
 

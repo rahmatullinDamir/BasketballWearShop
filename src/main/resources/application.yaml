@@ -50,3 +50,13 @@ app:
 server:
   port: ${SERVER_PORT}
   shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, info
+  metrics:
+    export:
+      prometheus:
+        enabled: true

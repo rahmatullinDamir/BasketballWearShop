@@ -11,13 +11,18 @@ spec:
     metadata:
       labels:
         app: basketball-app
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/actuator/prometheus"
     spec:
       containers:
         - name: basketball-app
           image: basketball-wear-shop:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 8080
+            - name: http
+              containerPort: 8080
           envFrom:
             - configMapRef:
                 name: app-config
@@ -28,13 +33,13 @@ spec:
               memory: "512Mi"
               cpu: "500m"
             limits:
-              memory: "1Gi"
+              memory: "2Gi"
               cpu: "1000m"
           startupProbe:
             httpGet:
               path: /
               port: 8080
-            failureThreshold: 30
+            failureThreshold: 60
             periodSeconds: 5
           readinessProbe:
             httpGet:

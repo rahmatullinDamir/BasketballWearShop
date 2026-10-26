@@ -1,5 +1,6 @@
 package org.example.basketballshop.services.Impl;
 
+import io.micrometer.core.instrument.MeterRegistry;
 import lombok.RequiredArgsConstructor;
 import org.example.basketballshop.dto.forms.BadgeForm;
 import org.example.basketballshop.models.Badge;
@@ -24,6 +25,7 @@ public class BadgesServiceImpl implements BadgesService {
     private final ImageInfoService imageInfoService;
     private final UserServiceImpl userService;
     private final UserRepository userRepository;
+    private final MeterRegistry meterRegistry;
 
     public boolean hasBadge(User user, String badgeName) {
         try {
@@ -58,6 +60,8 @@ public class BadgesServiceImpl implements BadgesService {
                 userRepository.save(user);
 
                 logger.info("Successfully awarded badge {} to user {}", badgeName, user.getEmail());
+
+                meterRegistry.counter("shop_badges_awarded_total", "badge_name", badge.getName()).increment();
             } else {
                 logger.info("User {} already has badge {}", user.getEmail(), badgeName);
             }
