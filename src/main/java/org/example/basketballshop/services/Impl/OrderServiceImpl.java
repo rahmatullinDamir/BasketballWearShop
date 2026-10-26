@@ -1,5 +1,8 @@
 package org.example.basketballshop.services.Impl;
 
+import io.micrometer.core.instrument.MeterRegistry;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.example.basketballshop.dto.OrderDto;
 import org.example.basketballshop.models.*;
 import org.example.basketballshop.models.enums.GiftCertificateStatus;
@@ -26,26 +29,17 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private static final Logger logger = LoggerFactory.getLogger(OrderServiceImpl.class);
 
-    @Autowired
-    private OrderRepository orderRepository;
-
-    @Autowired
-    private CartRepository cartRepository;
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private CartService cartService;
-
-    @Autowired
-    private GiftCertificateRepository giftCertificateRepository;
-
-    @Autowired
-    private BadgesService badgesService;
+    private final OrderRepository orderRepository;
+    private final CartRepository cartRepository;
+    private final UserRepository userRepository;
+    private final CartService cartService;
+    private final GiftCertificateRepository giftCertificateRepository;
+    private final BadgesService badgesService;
+    private final MeterRegistry meterRegistry;
 
     @Override
     @Transactional
@@ -149,6 +143,7 @@ public class OrderServiceImpl implements OrderService {
 
             Order savedOrder = orderRepository.save(order);
             logger.info("Successfully created order {} for user {}", savedOrder.getId(), userEmail);
+            meterRegistry.counter("shop_revenue_total", "currency", "RUB").increment(order.getTotal().doubleValue());
             return savedOrder;
         } catch (DataAccessException e) {
             logger.error("Database error while creating order for user: {}", userEmail, e);

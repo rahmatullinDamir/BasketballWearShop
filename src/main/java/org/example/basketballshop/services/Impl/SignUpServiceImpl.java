@@ -1,5 +1,7 @@
 package org.example.basketballshop.services.Impl;
 
+import io.micrometer.core.instrument.MeterRegistry;
+import lombok.RequiredArgsConstructor;
 import org.example.basketballshop.dto.forms.UserForm;
 import org.example.basketballshop.models.enums.SystemBadge;
 import org.example.basketballshop.models.enums.UserRole;
@@ -15,24 +17,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.dao.DataIntegrityViolationException;
 
 @Service
+@RequiredArgsConstructor
 public class SignUpServiceImpl implements SignUpService {
     private static final Logger logger = LoggerFactory.getLogger(SignUpServiceImpl.class);
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private BadgesService badgeService;
-
-    @Autowired
-    private PasswordEncoder encoder;
+    private final PasswordEncoder encoder;
+    private final BadgesService badgeService;
+    private final MeterRegistry meterRegistry;
+    private final UserRepository userRepository;
 
     @Override
     public void signUp(UserForm userForm) {
         try {
             logger.info("Starting user registration process for email: {}", userForm.getEmail());
 
-            // Check if user already exists
             if (userRepository.findByEmail(userForm.getEmail()).isPresent()) {
                 logger.error("User with email {} already exists", userForm.getEmail());
                 throw new IllegalStateException("User with this email already exists");
@@ -52,6 +50,7 @@ public class SignUpServiceImpl implements SignUpService {
             badgeService.awardBadgeToUser(user, SystemBadge.NOVICE.getTitle());
 
             logger.info("Successfully completed registration for user: {}", user.getUsername());
+            meterRegistry.counter("shop_users_registered_total", "role", user.getRole().name()).increment();
         } catch (DataIntegrityViolationException e) {
             logger.error("Database error during user registration", e);
             throw new IllegalStateException("Error during user registration: " + e.getMessage());
