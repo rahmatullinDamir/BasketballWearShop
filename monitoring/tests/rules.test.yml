@@ -1,0 +1,333 @@
+rule_files:
+- ../alerts.yml
+evaluation_interval: 15s
+tests:
+- name: HTTP 20% errors trigger
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="500",uri="/api/products/{id}",method="GET"}
+    values: 0+12x20
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/api/products/{id}",method="GET"}
+    values: 0+48x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts:
+    - exp_labels:
+        app: basketball-app
+        kubernetes_namespace: default
+        severity: critical
+        service: basketball-wear-shop
+        category: service
+        uri: /api/products/{id}
+        method: GET
+      exp_annotations: &id001
+        summary: Высокая доля HTTP 5xx
+        description: Более 5% ответов маршрута — 5xx за 5 минут; не менее 20 запросов; условие держится 2 минуты.
+        action: Проверить маршрут из labels, логи приложения и доступность PostgreSQL, Redis и S3.
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Single errors under minimum traffic do not trigger
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="500",uri="/api/products/{id}",method="GET"}
+    values: 0+1x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Healthy HTTP does not trigger
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Actuator traffic is excluded
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="500",uri="/actuator/health",method="GET"}
+    values: 0+60x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Different namespace is excluded
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="other",instance="10.0.0.1:8080",status="500",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Route grouping prevents masking errors
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="500",uri="/api/products/{id}",method="GET"}
+    values: 0+12x20
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/api/products/{id}",method="GET"}
+    values: 0+48x20
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/",method="GET"}
+    values: 0+60000x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts:
+    - exp_labels:
+        app: basketball-app
+        kubernetes_namespace: default
+        severity: critical
+        service: basketball-wear-shop
+        category: service
+        uri: /api/products/{id}
+        method: GET
+      exp_annotations: *id001
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Slow p95 triggers
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="0.5",uri="/api/products/{id}",method="GET"}
+    values: 0+0x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="1",uri="/api/products/{id}",method="GET"}
+    values: 0+0x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="2",uri="/api/products/{id}",method="GET"}
+    values: 0+57x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="5",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="+Inf",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts:
+    - exp_labels:
+        app: basketball-app
+        kubernetes_namespace: default
+        severity: warning
+        service: basketball-wear-shop
+        category: service
+        uri: /api/products/{id}
+        method: GET
+      exp_annotations:
+        summary: Медленные ответы магазина
+        description: p95 времени ответа маршрута превышает 1 секунду за 5 минут; не менее 20 запросов; условие держится 3
+          минуты.
+        action: Проверить медленные SQL, ожидание соединений и задержки внешних HTTP/S3 вызовов.
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Fast p95 does not trigger
+  interval: 1m
+  input_series:
+  - series: http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="0.5",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="1",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="2",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="5",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  - series: http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",status="200",le="+Inf",uri="/api/products/{id}",method="GET"}
+    values: 0+60x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: High heap triggers
+  interval: 1m
+  input_series:
+  - series: jvm_memory_used_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="G1
+      Old Gen"}
+    values: 90+0x20
+  - series: jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="G1
+      Old Gen"}
+    values: 100+0x20
+  - series: jvm_memory_used_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="Unknown"}
+    values: 10000+0x20
+  - series: jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="Unknown"}
+    values: -1+0x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts:
+    - exp_labels:
+        app: basketball-app
+        kubernetes_namespace: default
+        severity: warning
+        service: basketball-wear-shop
+        category: runtime
+        instance: 10.0.0.1:8080
+      exp_annotations:
+        summary: Высокое заполнение JVM heap
+        description: Занято более 85% максимума heap-пулов с известным положительным max в течение 5 минут.
+        action: Проверить GC, рост памяти и JVM heap limit; при необходимости исследовать heap dump.
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Healthy heap excludes pools with undefined max
+  interval: 1m
+  input_series:
+  - series: jvm_memory_used_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="G1
+      Old Gen"}
+    values: 40+0x20
+  - series: jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="G1
+      Old Gen"}
+    values: 100+0x20
+  - series: jvm_memory_used_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="Unknown"}
+    values: 10000+0x20
+  - series: jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",area="heap",id="Unknown"}
+    values: -1+0x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: Persistent pool wait triggers
+  interval: 1m
+  input_series: &id002
+  - series: hikaricp_connections_pending{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",instance="10.0.0.1:8080",pool="HikariPool-1"}
+    values: 3+0x20
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts:
+    - exp_labels:
+        app: basketball-app
+        kubernetes_namespace: default
+        severity: warning
+        service: basketball-wear-shop
+        category: framework
+        instance: 10.0.0.1:8080
+        pool: HikariPool-1
+      exp_annotations:
+        summary: Ожидание соединений с БД
+        description: В HikariCP есть ожидающие соединения потоки на каждой проверке в течение 2 минут.
+        action: Проверить PostgreSQL, долгие транзакции, утечки соединений и размер пула.
+- name: Before for-duration no pool alert
+  interval: 1m
+  input_series: *id002
+  alert_rule_test:
+  - eval_time: 1m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 1m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 1m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 1m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []
+- name: No data does not invent healthy or firing series
+  interval: 1m
+  input_series: []
+  alert_rule_test:
+  - eval_time: 10m
+    alertname: ShopHighHttp5xxRate
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopHighHttpP95
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopJvmHeapHigh
+    exp_alerts: []
+  - eval_time: 10m
+    alertname: ShopDbConnectionWait
+    exp_alerts: []

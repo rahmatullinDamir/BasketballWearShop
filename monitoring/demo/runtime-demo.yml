@@ -1,0 +1,22 @@
+groups:
+- name: basketball-shop-demo
+  interval: 15s
+  rules:
+  - alert: DemoShopJvmHeapNotification
+    expr: "(\n  sum by (app, kubernetes_namespace, instance) (\n    jvm_memory_used_bytes{job=\"kubernetes-pods-annotations\"\
+      ,app=\"basketball-app\",kubernetes_namespace=\"default\",area=\"heap\"}\n    and on (job, app, kubernetes_namespace,\
+      \ instance, id)\n    (jvm_memory_max_bytes{job=\"kubernetes-pods-annotations\",app=\"basketball-app\",kubernetes_namespace=\"\
+      default\",area=\"heap\"} > 0)\n  )\n  /\n  sum by (app, kubernetes_namespace, instance) (\n    jvm_memory_max_bytes{job=\"\
+      kubernetes-pods-annotations\",app=\"basketball-app\",kubernetes_namespace=\"default\",area=\"heap\"} > 0\n\
+      \  )\n) > 0.001\n"
+    for: 30s
+    labels:
+      severity: info
+      service: basketball-wear-shop
+      category: runtime
+      demo: 'true'
+    annotations:
+      summary: 'DEMO: доставка алерта по настоящей JVM-метрике'
+      description: Тестовый порог heap снижен до 0.1%, for=30s. Это проверка доставки, а не подтверждение нехватки
+        памяти.
+      action: Сделать скриншот и отключить demo после проверки.

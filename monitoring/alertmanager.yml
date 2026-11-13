@@ -1,0 +1,15 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: homework-webhook
+  group_by: [alertname, service, kubernetes_namespace]
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: homework-webhook
+    webhook_configs:
+      - url: http://shop-alert-inbox:8080/alerts
+        send_resolved: true

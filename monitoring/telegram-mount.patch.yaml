@@ -1,0 +1,13 @@
+spec:
+  template:
+    spec:
+      containers:
+        - name: alertmanager
+          volumeMounts:
+            - name: telegram
+              mountPath: /etc/telegram
+              readOnly: true
+      volumes:
+        - name: telegram
+          secret:
+            secretName: shop-telegram

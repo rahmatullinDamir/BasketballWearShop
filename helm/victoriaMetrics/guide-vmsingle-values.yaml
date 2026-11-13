@@ -1,7 +1,6 @@
 server:
   scrape:
     enabled: true
-    configMap: ""
 
     config:
       global:
