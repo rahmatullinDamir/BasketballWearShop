@@ -1,0 +1,26 @@
+# Optional alternative to alertmanager.yml. Not enabled by install.sh.
+# Put the real bot token in a Kubernetes Secret; never commit it.
+global:
+  resolve_timeout: 5m
+route:
+  receiver: telegram
+  group_by: [alertname, service, kubernetes_namespace]
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+receivers:
+  - name: telegram
+    telegram_configs:
+      - bot_token_file: /etc/telegram/bot-token
+        chat_id: 123456789 # Replace with YOUR chat ID (integer, possibly negative).
+        parse_mode: ""
+        send_resolved: true
+        message: |-
+          [{{ .Status | toUpper }}] BasketballWearShop
+          {{ range .Alerts }}
+          {{ .Labels.alertname }} ({{ .Labels.severity }})
+          {{ .Annotations.summary }}
+          {{ .Annotations.description }}
+          {{ .Annotations.action }}
+          {{ range .Labels.SortedPairs }}{{ .Name }}={{ .Value }} {{ end }}
+          {{ end }}

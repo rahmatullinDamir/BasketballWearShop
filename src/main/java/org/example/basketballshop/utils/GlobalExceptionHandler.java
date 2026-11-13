@@ -34,7 +34,9 @@ public class GlobalExceptionHandler {
             response.put("status", HttpStatus.NOT_FOUND.value());
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
-        return new ModelAndView("error/404");
+        ModelAndView view = new ModelAndView("error/404");
+        view.setStatus(HttpStatus.NOT_FOUND);
+        return view;
     }
 
     @ExceptionHandler(AccessDeniedException.class)
@@ -47,7 +49,9 @@ public class GlobalExceptionHandler {
             response.put("status", HttpStatus.FORBIDDEN.value());
             return new ResponseEntity<>(response, HttpStatus.FORBIDDEN);
         }
-        return new ModelAndView("error/403");
+        ModelAndView view = new ModelAndView("error/403");
+        view.setStatus(HttpStatus.FORBIDDEN);
+        return view;
     }
 
     @ExceptionHandler(UsernameNotFoundException.class)
@@ -60,7 +64,9 @@ public class GlobalExceptionHandler {
             response.put("status", HttpStatus.NOT_FOUND.value());
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
-        return new ModelAndView("error/404");
+        ModelAndView view = new ModelAndView("error/404");
+        view.setStatus(HttpStatus.NOT_FOUND);
+        return view;
     }
 
     @ExceptionHandler(RuntimeException.class)
@@ -73,7 +79,9 @@ public class GlobalExceptionHandler {
             response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ModelAndView("error/500");
+        ModelAndView view = new ModelAndView("error/500");
+        view.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+        return view;
     }
 
     @ExceptionHandler(Exception.class)
@@ -86,6 +94,8 @@ public class GlobalExceptionHandler {
             response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ModelAndView("error/500");
+        ModelAndView view = new ModelAndView("error/500");
+        view.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+        return view;
     }
 } 

@@ -1,0 +1,96 @@
+groups:
+  - name: basketball-shop-service
+    interval: 15s
+    rules:
+      - alert: ShopHighHttp5xxRate
+        expr: |
+          (
+            sum by (app, kubernetes_namespace, uri, method) (
+              rate(http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",status=~"5..",uri!~"/actuator.*|/css/.*|/js/.*|/images/.*|/fonts/.*|/favicon.ico"}[5m])
+            )
+            /
+            sum by (app, kubernetes_namespace, uri, method) (
+              rate(http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",uri!~"/actuator.*|/css/.*|/js/.*|/images/.*|/fonts/.*|/favicon.ico"}[5m])
+            ) > 0.05
+          )
+          and on (app, kubernetes_namespace, uri, method)
+          (
+            sum by (app, kubernetes_namespace, uri, method) (
+              increase(http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",uri!~"/actuator.*|/css/.*|/js/.*|/images/.*|/fonts/.*|/favicon.ico"}[5m])
+            ) >= 20
+          )
+        for: 2m
+        labels:
+          severity: critical
+          service: basketball-wear-shop
+          category: service
+        annotations:
+          summary: "Высокая доля HTTP 5xx"
+          description: "Более 5% ответов маршрута — 5xx за 5 минут; не менее 20 запросов; условие держится 2 минуты."
+          action: "Проверить маршрут из labels, логи приложения и доступность PostgreSQL, Redis и S3."
+
+      - alert: ShopHighHttpP95
+        expr: |
+          (
+            histogram_quantile(0.95,
+              sum by (app, kubernetes_namespace, uri, method, le) (
+                rate(http_server_requests_seconds_bucket{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",uri!~"/actuator.*|/css/.*|/js/.*|/images/.*|/fonts/.*|/favicon.ico"}[5m])
+              )
+            ) > 1
+          )
+          and on (app, kubernetes_namespace, uri, method)
+          (
+            sum by (app, kubernetes_namespace, uri, method) (
+              increase(http_server_requests_seconds_count{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",uri!~"/actuator.*|/css/.*|/js/.*|/images/.*|/fonts/.*|/favicon.ico"}[5m])
+            ) >= 20
+          )
+        for: 3m
+        labels:
+          severity: warning
+          service: basketball-wear-shop
+          category: service
+        annotations:
+          summary: "Медленные ответы магазина"
+          description: "p95 времени ответа маршрута превышает 1 секунду за 5 минут; не менее 20 запросов; условие держится 3 минуты."
+          action: "Проверить медленные SQL, ожидание соединений и задержки внешних HTTP/S3 вызовов."
+
+  - name: basketball-shop-runtime
+    interval: 15s
+    rules:
+      - alert: ShopJvmHeapHigh
+        expr: |
+          (
+            sum by (app, kubernetes_namespace, instance) (
+              jvm_memory_used_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",area="heap"}
+              and on (job, app, kubernetes_namespace, instance, id)
+              (jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",area="heap"} > 0)
+            )
+            /
+            sum by (app, kubernetes_namespace, instance) (
+              jvm_memory_max_bytes{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default",area="heap"} > 0
+            )
+          ) > 0.85
+        for: 5m
+        labels:
+          severity: warning
+          service: basketball-wear-shop
+          category: runtime
+        annotations:
+          summary: "Высокое заполнение JVM heap"
+          description: "Занято более 85% максимума heap-пулов с известным положительным max в течение 5 минут."
+          action: "Проверить GC, рост памяти и JVM heap limit; при необходимости исследовать heap dump."
+
+      - alert: ShopDbConnectionWait
+        expr: |
+          max by (app, kubernetes_namespace, instance, pool) (
+            hikaricp_connections_pending{job="kubernetes-pods-annotations",app="basketball-app",kubernetes_namespace="default"}
+          ) > 0
+        for: 2m
+        labels:
+          severity: warning
+          service: basketball-wear-shop
+          category: framework
+        annotations:
+          summary: "Ожидание соединений с БД"
+          description: "В HikariCP есть ожидающие соединения потоки на каждой проверке в течение 2 минут."
+          action: "Проверить PostgreSQL, долгие транзакции, утечки соединений и размер пула."
